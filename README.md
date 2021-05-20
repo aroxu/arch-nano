@@ -61,5 +61,40 @@ $ wget http://os.archlinuxarm.org/os/ArchLinuxARM-aarch64-latest.tar.gz
 $ sudo tar -xpf ArchLinuxARM-aarch64-latest.tar.gz
 ```
 
+```
+$ cd Linux_for_Tegra/nv_tools/scripts/
+$ nano nv_customize_rootfs.sh
+```
+
+Find
+```
+    if [ -d "${LDK_ROOTFS_DIR}/usr/lib/arm-linux-gnueabihf/tegra" ]; then
+        ARM_ABI_DIR_ABS="usr/lib/arm-linux-gnueabihf"
+    elif [ -d "${LDK_ROOTFS_DIR}/usr/lib/arm-linux-gnueabi/tegra" ]; then
+        ARM_ABI_DIR_ABS="usr/lib/arm-linux-gnueabi"
+    elif [ -d "${LDK_ROOTFS_DIR}/usr/lib/aarch64-linux-gnu/tegra" ]; then
+        ARM_ABI_DIR_ABS="usr/lib/aarch64-linux-gnu"
+    else
+        echo "Error: None of Hardfp/Softfp Tegra libs found"
+        exit 4
+    fi
+```
+
+Replace with:
+```
+    if [ -d "${LDK_ROOTFS_DIR}/usr/lib/arm-linux-gnueabihf/tegra" ]; then
+        ARM_ABI_DIR_ABS="usr/lib/arm-linux-gnueabihf"
+    elif [ -d "${LDK_ROOTFS_DIR}/usr/lib/arm-linux-gnueabi/tegra" ]; then
+        ARM_ABI_DIR_ABS="usr/lib/arm-linux-gnueabi"
+    elif [ -d "${LDK_ROOTFS_DIR}/usr/lib/aarch64-linux-gnu/tegra" ]; then
+        ARM_ABI_DIR_ABS="usr/lib/aarch64-linux-gnu"
+    elif [ -d "${LDK_ROOTFS_DIR}/usr/lib/tegra" ]; then
+        ARM_ABI_DIR="${LDK_ROOTFS_DIR}/usr/lib"
+    else
+        echo "Error: None of Hardfp/Softfp Tegra libs found"
+        exit 4
+    fi
+```
+
 ## Extra Info
 * L4T VERSION: R32.5.1
