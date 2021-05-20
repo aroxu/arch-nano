@@ -7,7 +7,11 @@ Arch Linux for Nvidia Jetson Nano because it lacks updated tutorials online + no
 * [Setup](#setup)
 
 ## General info
-So i got the idea why let's not create a pre-created iso for the Nvidia Jetson Nano and post it on Github.'
+So i got the idea why let's not create a pre-created iso for the Nvidia Jetson Nano and post it on Github.
+
+Arch-Nano will be available for:
+* Jetson Nano (2GB)
+* Jetson Nano (4GB)
 	
 ## Need for
 Project is created with:
