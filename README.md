@@ -61,6 +61,8 @@ $ wget http://os.archlinuxarm.org/os/ArchLinuxARM-aarch64-latest.tar.gz
 $ sudo tar -xpf ArchLinuxARM-aarch64-latest.tar.gz
 ```
 
+
+Let's edit some files:
 ```
 $ cd Linux_for_Tegra/nv_tools/scripts/
 $ nano nv_customize_rootfs.sh
