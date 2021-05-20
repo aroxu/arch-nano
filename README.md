@@ -31,15 +31,30 @@ Some text will be applied here i guess.
 ## Build it yourself (Debian/Ubuntu)
 So before we begin i use a Linux based operating system with `apt`
 
+
+I love housekeeping so let's start with:
 ```
-$ sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y && sudo apt clean && clear
+$ sudo apt update
+$ sudo apt upgrade -y
+$ sudo apt autoremove -y
+$ sudo apt clean
 $ sudo apt install curl wget git
 ```
+
+Create a `Folder` for this project
+```
+$ mkdir ProjectFolder
+$ cd ProjectFolder
+```
+
+Download the Nvidia Jetson Nano L4T Driver Package (BSP) and extract
 ```
 $ wget https://developer.nvidia.com/embedded/l4t/r32_release_v5.1/r32_release_v5.1/t210/jetson-210_linux_r32.5.1_aarch64.tbz2
 $ sudo tar jxpf jetson-210_linux_r32.5.1_aarch64.tbz2
 $ cd Linux_for_Tegra
 ```
+
+Download Arch Linux aarch64 and extract
 ```
 $ cd rootfs
 $ wget http://os.archlinuxarm.org/os/ArchLinuxARM-aarch64-latest.tar.gz
