@@ -113,5 +113,79 @@ $ sudo tar -xpjf nv_tools.tbz2 -C nv_tools/
 $ sudo tar -xpjf nv_sample_apps/nvgstapps.tbz2 -C nv_sample_apps/nvgstapps/
 ```
 
+```
+$ cd Linux_for_Tegra/nv_tegra/nvidia_drivers
+$ sudo mv lib/* usr/lib/
+$ sudo rm -r lib
+```
+
+```
+$ sudo mv usr/lib/aarch64-linux-gnu/* usr/lib/
+$ sudo rm -r usr/lib/aarch64-linux-gnu
+```
+
+```
+$ sudo nano Linux_for_Tegra/nv_tegra/nvidia_drivers/etc/nv_tegra_release
+```
+
+Find
+```
+0c165125388fbd943e7f8b37a272dec7c5d57c15 */usr/lib/aarch64-linux-gnu/tegra/libnvmm.so
+```
+
+Repalce with:
+```
+0c165125388fbd943e7f8b37a272dec7c5d57c15 */usr/lib/tegra/libnvmm.so
+```
+
+```
+$ cd Linux_for_Tegra/nv_tegra/nv_tools
+$ mkdir -p usr/bin
+$ mv home/ubuntu/tegrastats usr/bin/
+$ rm -r home
+```
+
+```
+$ cd Linux_for_Tegra/nv_tegra/nv_sample_apps/nvgstapps/
+$ sudo mv usr/sbin/* usr/bin
+$ sudo rm -r usr/sbin
+```
+
+```
+$ sudo mv usr/lib/arm-linux-gnueabihf/* usr/lib/
+$ sudo rm -r usr/lib/arm-linux-gnueabihf
+```
+
+```
+$ cd Linux_for_Tegra/nv_tegra
+```
+
+```
+$ cd nvidia_drivers
+$ sudo tar -cpjf ../nvidia_drivers.tbz2 *
+$ cd ..
+```
+
+```
+$ cd config
+$ sudo tar -cpjf ../config.tbz2 *
+$ cd ..
+```
+
+```
+$ cd nv_tools
+$ sudo tar -cpjf ../nv_tools.tbz2 *
+$ cd ..
+```
+
+```
+$ cd nv_sample_apps/nvgstapps
+$ sudo tar -cpjf ../nvgstapps.tbz2 *
+$ cd ../..
+```
+
+
+
+
 ## Extra Info
 * L4T VERSION: R32.5.1
