@@ -62,7 +62,7 @@ $ sudo tar -xpf ArchLinuxARM-aarch64-latest.tar.gz
 ```
 
 
-Let's edit some files:
+Now we need to add some lines to the `nv_customize_rootfs.sh` file
 ```
 $ cd Linux_for_Tegra/nv_tools/scripts/
 $ nano nv_customize_rootfs.sh
@@ -96,6 +96,21 @@ Replace with:
         echo "Error: None of Hardfp/Softfp Tegra libs found"
         exit 4
     fi
+```
+
+
+Now we need to create some folders
+```
+$ cd Linux_for_Tegra/nv_tegra
+$ sudo mkdir nvidia_drivers config nv_tools nv_sample_apps/nvgstapps
+```
+
+After the folders are created we extract .tbz2 and move the folders
+```
+$ sudo tar -xpjf nvidia_drivers.tbz2 -C nvidia_drivers/
+$ sudo tar -xpjf config.tbz2 -C config/
+$ sudo tar -xpjf nv_tools.tbz2 -C nv_tools/
+$ sudo tar -xpjf nv_sample_apps/nvgstapps.tbz2 -C nv_sample_apps/nvgstapps/
 ```
 
 ## Extra Info
