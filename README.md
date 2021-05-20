@@ -28,7 +28,7 @@ These items are needed:
 Some text will be applied here i guess.
 
 
-## Build it yourself
+## Build it yourself (Debian/Ubuntu)
 So before we begin i use a Linux based operating system with `apt`
 
 ```
