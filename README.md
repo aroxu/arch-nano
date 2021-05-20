@@ -29,11 +29,11 @@ Some text will be applied here i guess.
 
 
 ## Build it yourself
-Some text will be applied here i guess.
+So before we begin i use a Linux based operating system with `apt`
 
 ```
 $ sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y && sudo apt clean && clear
-$ sudo apt install curl wget git sudo
+$ sudo apt install curl wget git
 ```
 ```
 $ apt wget https://developer.nvidia.com/embedded/l4t/r32_release_v5.1/r32_release_v5.1/t210/jetson-210_linux_r32.5.1_aarch64.tbz2
