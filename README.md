@@ -36,7 +36,7 @@ $ sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y && sudo apt c
 $ sudo apt install curl wget git
 ```
 ```
-$ apt wget https://developer.nvidia.com/embedded/l4t/r32_release_v5.1/r32_release_v5.1/t210/jetson-210_linux_r32.5.1_aarch64.tbz2
+$ wget https://developer.nvidia.com/embedded/l4t/r32_release_v5.1/r32_release_v5.1/t210/jetson-210_linux_r32.5.1_aarch64.tbz2
 $ sudo tar jxpf jetson-210_linux_r32.5.1_aarch64.tbz2
 $ cd Linux_for_Tegra
 ```
