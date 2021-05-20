@@ -137,6 +137,8 @@ Repalce with:
 ```
 0c165125388fbd943e7f8b37a272dec7c5d57c15 */usr/lib/tegra/libnvmm.so
 ```
+Now save this with the following command because we use nano: `CTRL` + `X` then `Y` and hit `enter`
+
 
 ```
 $ cd Linux_for_Tegra/nv_tegra/nv_tools
