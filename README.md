@@ -19,7 +19,7 @@ It will work on
 * Micro SD Card
 * Micro USB Cable
 * balenaEtcher
-* 2 jumpers (for recovery mode)
+* 1 jumper (for recovery mode)
 
 ### Basic Knowledge:
 * How to save with `nano`: `CTRL` + `X` then `Y` then `ENTER`
