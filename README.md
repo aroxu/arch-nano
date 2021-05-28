@@ -23,7 +23,6 @@ It will work on
 
 ### Basic Knowledge:
 * How to save with `nano`: `CTRL` + `X` then `Y` then `ENTER`
-* How to create a empty file: `touch filename.txt` 
 
 ## Build it yourself (Debian/Ubuntu)
 So before we begin i use a Linux based operating system with `apt` but for those who like `apt-get` can use that.<br>
